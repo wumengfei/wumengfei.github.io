@@ -95,23 +95,23 @@
 
 
 
-<meta name="description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者">
+<meta name="description" content="相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)">
 <meta name="keywords" content="机器学习,面经">
 <meta property="og:type" content="article">
 <meta property="og:title" content="梯度下降（GD）和随机梯度下降（SGD）的区别">
 <meta property="og:url" content="http://yoursite.com/2017/09/01/梯度下降（GD）和随机梯度下降（SGD）的区别/index.html">
 <meta property="og:site_name" content="Andy&#39;s Blog">
-<meta property="og:description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者">
+<meta property="og:description" content="相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/square.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/gdupdate.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/sgd.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/sgdupdate.png">
-<meta property="og:updated_time" content="2017-09-03T09:08:46.000Z">
+<meta property="og:updated_time" content="2017-09-03T09:24:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梯度下降（GD）和随机梯度下降（SGD）的区别">
-<meta name="twitter:description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者">
+<meta name="twitter:description" content="相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)">
 <meta name="twitter:image" content="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png">
 
 
@@ -374,13 +374,10 @@
       
 
       
-        <blockquote>
-<p>参考链接：<a href="http://www.jianshu.com/p/c497b41f8caa" target="_blank" rel="external">http://www.jianshu.com/p/c497b41f8caa</a></p>
-</blockquote>
-<h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h2><p>在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。</p>
+        <h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h2><p>在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。</p>
 <h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h2 id="GD"><a href="#GD" class="headerlink" title="GD"></a>GD</h2><p>在GD中，每次迭代都要用到全部训练数据。<br>假设线性模型：<br><img src="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png" alt="&quot;线性模型公式&quot;"><br>$\theta$ 是参数，损失函数为：<br><img src="http://ovp0u3o01.bkt.clouddn.com/square.png" alt="&quot;损失函数&quot;"><br>那么每次GD的更新算法为：<br><img src="http://ovp0u3o01.bkt.clouddn.com/gdupdate.png" alt="&quot;GD更新算法&quot;"><br>由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。</p>
 <h2 id="SGD"><a href="#SGD" class="headerlink" title="SGD"></a>SGD</h2><p>在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。<br>回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)，<br><img src="http://ovp0u3o01.bkt.clouddn.com/sgd.png" alt="&quot;SGD&quot;"><br>所以此时的更新参数的算法变为：<br><img src="http://ovp0u3o01.bkt.clouddn.com/sgdupdate.png" alt="&quot;SGD更新算法&quot;"><br>此时更新的算法，只用到了一个样本。<br>其实也可以这样理解，就是来了一条训练数据，算下此时根据模型算出的值和实际值的差距，如果差距大，那么参数更新的幅度大，反之则小。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当训练数据过大时，用GD可能造成内存不够用，那么就可以用SGD了，SGD其实可以算作是一种online-learning。另外SGD收敛会比GD快，但是对于代价函数求最小值还是GD做的比较好，不过SGD也够用了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>SGD可能更适用于<strong>低精度</strong>的任务，而梯度下降更适合<strong>高精度</strong>的任务。<br>由于SGD每次只用一个或部分样本的梯度做更新，所以前期的迭代速度相对较快，但是由于原始的SGD算法在目标函数强凸的情况下依旧无法做到线性收敛，所以当执行的次数足够多的时候，SGD的精度会被梯度下降算法赶超，因为梯度下降算法可以在目标函数强凸的时候有线性收敛速度。<br>换一种更形象的表述，梯度下降类似于在山的某一点环顾四周，计算下降最快的方向（多维），然后踏出一步，这属于一次迭代，更新一次$\theta$值；<br>随机梯度下降不会计算斜率最大的方向，而是每次只选择一个或某一批样本踏出一步，更新$\theta$值，再选择下一个样本更新。<br>如果$\theta$是m维向量，批梯度下降一次迭代会计算所有样本点更新$\theta _i$，每次更新都是向着最陡的方向前进；随机梯度下降一次迭代只计算一个样本点更新$\theta_i$，报着并不严谨的走走看的态度前进。<br>批梯度下降时间主要浪费在计算最优值，每一步都是朝着目标函数最小的方向，对于较大样本的训练集会比较慢。</p>
 <blockquote>
 <p>参考：</p>
 <ul>
