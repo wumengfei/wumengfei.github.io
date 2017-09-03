@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="机器学习,面经," />
 
 
 
@@ -95,14 +95,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：\theta 是参数，损失函数为：">
+<meta name="keywords" content="机器学习,面经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习算法之逻辑回归（LR）">
+<meta property="og:url" content="http://yoursite.com/2017/09/03/对逻辑回归的理解/index.html">
 <meta property="og:site_name" content="Andy&#39;s Blog">
+<meta property="og:description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：\theta 是参数，损失函数为：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-01T13:48:31.000Z">
+<meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png">
+<meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/square.png">
+<meta property="og:updated_time" content="2017-09-03T08:46:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="机器学习算法之逻辑回归（LR）">
+<meta name="twitter:description" content="参考链接：http://www.jianshu.com/p/c497b41f8caa  相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：\theta 是参数，损失函数为：">
+<meta name="twitter:image" content="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png">
 
 
 
@@ -132,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/03/对逻辑回归的理解/"/>
 
 
 
 
 
-  <title>categories | Andy's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>机器学习算法之逻辑回归（LR） | Andy's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -263,40 +270,172 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/03/对逻辑回归的理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Andy Wu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Andy's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 2 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/机器学习/">机器学习</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">机器学习算法之逻辑回归（LR）</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T16:08:58+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>参考链接：<a href="http://www.jianshu.com/p/c497b41f8caa" target="_blank" rel="external">http://www.jianshu.com/p/c497b41f8caa</a></p>
+</blockquote>
+<h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h2><p>在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。</p>
+<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><h2 id="GD"><a href="#GD" class="headerlink" title="GD"></a>GD</h2><p>在GD中，每次迭代都要用到全部训练数据。<br>假设线性模型：<br><img src="http://ovp0u3o01.bkt.clouddn.com/linearmodel.png" alt="&quot;线性模型公式&quot;"><br>\theta 是参数，损失函数为：<br><img src="http://ovp0u3o01.bkt.clouddn.com/square.png" alt="&quot;损失函数&quot;"></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+            <a href="/tags/面经/" rel="tag"># 面经</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/01/动态规划之-最长公共子序列问题/" rel="next" title="动态规划之-最长公共子序列问题">
+                <i class="fa fa-chevron-left"></i> 动态规划之-最长公共子序列问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -329,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -395,6 +543,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相同点"><span class="nav-number">1.</span> <span class="nav-text">相同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">2.</span> <span class="nav-text">不同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GD"><span class="nav-number">3.</span> <span class="nav-text">GD</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -515,6 +679,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
