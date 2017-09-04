@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/gdupdate.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/sgd.png">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/sgdupdate.png">
-<meta property="og:updated_time" content="2017-09-03T09:29:18.000Z">
+<meta property="og:updated_time" content="2017-09-03T14:29:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梯度下降（GD）和随机梯度下降（SGD）的区别">
 <meta name="twitter:description" content="相同点在GD和SGD中，每次迭代中都会更新模型的参数，使得损失函数变小。 不同点GD在GD中，每次迭代都要用到全部训练数据。假设线性模型：$\theta$ 是参数，损失函数为：那么每次GD的更新算法为：由此算法可知，在对代价函数求偏导时，是需要用到全部的训练数据的。 SGD在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)">
@@ -379,13 +379,10 @@
 <h2 id="SGD"><a href="#SGD" class="headerlink" title="SGD"></a>SGD</h2><p>在SGD中，每次迭代可以只用一个或者一部分训练数据来更新参数。<br>回到GD的更新算法，假设此时我们此时训练数据就只有一条(x,y)，<br><img src="http://ovp0u3o01.bkt.clouddn.com/sgd.png" alt="&quot;SGD&quot;"><br>所以此时的更新参数的算法变为：<br><img src="http://ovp0u3o01.bkt.clouddn.com/sgdupdate.png" alt="&quot;SGD更新算法&quot;"><br>此时更新的算法，只用到了一个样本。<br>其实也可以这样理解，就是来了一条训练数据，算下此时根据模型算出的值和实际值的差距，如果差距大，那么参数更新的幅度大，反之则小。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>SGD可能更适用于<strong>低精度</strong>的任务，而梯度下降更适合<strong>高精度</strong>的任务。<br>由于SGD每次只用一个或部分样本的梯度做更新，所以前期的迭代速度相对较快，但是由于原始的SGD算法在目标函数强凸的情况下依旧无法做到线性收敛，所以当执行的次数足够多的时候，SGD的精度会被梯度下降算法赶超，因为梯度下降算法可以在目标函数强凸的时候有线性收敛速度。</p>
 <p>换一种更形象的表述，梯度下降类似于在山的某一点环顾四周，计算下降最快的方向（多维），然后踏出一步，这属于一次迭代，更新一次$\theta$值；<br>随机梯度下降不会计算斜率最大的方向，而是每次只选择一个或某一批样本踏出一步，更新$\theta$值，再选择下一个样本更新。<br>如果$\theta$是m维向量，批梯度下降一次迭代会计算所有样本点更新$\theta _i$，每次更新都是向着最陡的方向前进；随机梯度下降一次迭代只计算一个样本点更新$\theta_i$，报着并不严谨的走走看的态度前进。<br>批梯度下降时间主要浪费在计算最优值，每一步都是朝着目标函数最小的方向，对于较大样本的训练集会比较慢。</p>
-<blockquote>
-<p>参考：</p>
-<ul>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ul>
 <li><a href="http://www.jianshu.com/p/c497b41f8caa" target="_blank" rel="external">http://www.jianshu.com/p/c497b41f8caa</a></li>
 <li><a href="https://www.zhihu.com/question/40892922" target="_blank" rel="external">https://www.zhihu.com/question/40892922</a></li>
 </ul>
-</blockquote>
 
       
     </div>
@@ -506,7 +503,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -517,7 +514,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -528,7 +525,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -563,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相同点"><span class="nav-number">1.</span> <span class="nav-text">相同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">2.</span> <span class="nav-text">不同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GD"><span class="nav-number">3.</span> <span class="nav-text">GD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SGD"><span class="nav-number">4.</span> <span class="nav-text">SGD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相同点"><span class="nav-number">1.</span> <span class="nav-text">相同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同点"><span class="nav-number">2.</span> <span class="nav-text">不同点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GD"><span class="nav-number">3.</span> <span class="nav-text">GD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SGD"><span class="nav-number">4.</span> <span class="nav-text">SGD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">6.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
