@@ -95,19 +95,19 @@
 
 
 
-<meta name="description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
+<meta name="description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例">
 <meta name="keywords" content="算法,数据结构,数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将N个有序数组排列成一个有序数组">
 <meta property="og:url" content="http://yoursite.com/2017/09/06/将N个有序数组排列成一个有序数组/index.html">
 <meta property="og:site_name" content="Andy&#39;s Blog">
-<meta property="og:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
+<meta property="og:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/dpLCS.jpg">
-<meta property="og:updated_time" content="2017-09-07T01:57:37.000Z">
+<meta property="og:updated_time" content="2018-04-17T09:56:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将N个有序数组排列成一个有序数组">
-<meta name="twitter:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
+<meta name="twitter:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例">
 <meta name="twitter:image" content="http://ovp0u3o01.bkt.clouddn.com/dpLCS.jpg">
 
 
@@ -373,7 +373,8 @@
         <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
 <p>给定N个有序数组，将它们合并成一个有序数组。</p>
 </blockquote>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><blockquote>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><a id="more"></a>
+<blockquote>
 <p>str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”<br>“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。</p>
 </blockquote>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 <em>M x N</em> 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i] 与 str2[0:j] 的最长公共子序列的长度。从左到右，再从上到下计算矩阵dp。</p>
