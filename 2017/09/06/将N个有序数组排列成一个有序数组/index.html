@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="算法,数据结构,动态规划," />
+  <meta name="keywords" content="算法,数据结构,数组," />
 
 
 
@@ -95,19 +95,19 @@
 
 
 
-<meta name="description" content="题目 给定两个字符串 str1 和 str2，返回两个字符串的最长公共子序列的长度。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i">
-<meta name="keywords" content="算法,数据结构,动态规划">
+<meta name="description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
+<meta name="keywords" content="算法,数据结构,数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态规划之-最长公共子序列问题">
-<meta property="og:url" content="http://yoursite.com/2017/09/01/动态规划之-最长公共子序列问题/index.html">
+<meta property="og:title" content="将N个有序数组排列成一个有序数组">
+<meta property="og:url" content="http://yoursite.com/2017/09/06/将N个有序数组排列成一个有序数组/index.html">
 <meta property="og:site_name" content="Andy&#39;s Blog">
-<meta property="og:description" content="题目 给定两个字符串 str1 和 str2，返回两个字符串的最长公共子序列的长度。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i">
+<meta property="og:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovp0u3o01.bkt.clouddn.com/dpLCS.jpg">
-<meta property="og:updated_time" content="2017-09-03T08:53:29.000Z">
+<meta property="og:updated_time" content="2017-09-07T01:57:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态规划之-最长公共子序列问题">
-<meta name="twitter:description" content="题目 给定两个字符串 str1 和 str2，返回两个字符串的最长公共子序列的长度。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i">
+<meta name="twitter:title" content="将N个有序数组排列成一个有序数组">
+<meta name="twitter:description" content="题目 给定N个有序数组，将它们合并成一个有序数组。  举例 str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。  思路先介绍求解动态规划表的过程。如果 str1 的长度为M，str2 的长度为N，生成大小为 M x N 的矩阵dp，行数为 M，列数为 N。dp[i][j]的含义是 str1[0:i">
 <meta name="twitter:image" content="http://ovp0u3o01.bkt.clouddn.com/dpLCS.jpg">
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/01/动态规划之-最长公共子序列问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/06/将N个有序数组排列成一个有序数组/"/>
 
 
 
 
 
-  <title>动态规划之-最长公共子序列问题 | Andy's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>将N个有序数组排列成一个有序数组 | Andy's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/01/动态规划之-最长公共子序列问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/06/将N个有序数组排列成一个有序数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Andy Wu">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">动态规划之-最长公共子序列问题</h1>
+          <h1 class="post-title" itemprop="name headline">将N个有序数组排列成一个有序数组</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-01T21:58:58+08:00">
-                2017-09-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-06T17:28:58+08:00">
+                2017-09-06
               </time>
             
 
@@ -371,7 +371,7 @@
 
       
         <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<p>给定两个字符串 str1 和 str2，返回两个字符串的最长公共子序列的长度。</p>
+<p>给定N个有序数组，将它们合并成一个有序数组。</p>
 </blockquote>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><blockquote>
 <p>str1 = “1A2C3D4B56”，str2 = “B1D23CA45B6A”<br>“123456” 或者 “12C4B6” 都是最长公共子序列，返回6。</p>
@@ -410,7 +410,7 @@
           
             <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
-            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+            <a href="/tags/数组/" rel="tag"># 数组</a>
           
         </div>
       
@@ -423,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/01/梯度下降（GD）和随机梯度下降（SGD）的区别/" rel="next" title="梯度下降（GD）和随机梯度下降（SGD）的区别">
-                <i class="fa fa-chevron-left"></i> 梯度下降（GD）和随机梯度下降（SGD）的区别
+              <a href="/2017/09/04/进程和线程的关系及区别/" rel="next" title="进程和线程的关系及区别">
+                <i class="fa fa-chevron-left"></i> 进程和线程的关系及区别
               </a>
             
           </div>
@@ -432,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/03/对逻辑回归的理解/" rel="prev" title="机器学习算法之逻辑回归（LR）">
-                机器学习算法之逻辑回归（LR） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
